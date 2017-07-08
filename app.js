@@ -11,6 +11,8 @@
  */
 const express = require('express');
 const aws = require('aws-sdk');
+aws.config.update({region: 'ap-southeast-1'});
+aws.config.region = 'ap-southeast-1';
 
 /*
  * Set-up and run the Express app.
