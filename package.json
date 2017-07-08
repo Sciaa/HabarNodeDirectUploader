@@ -5,9 +5,5 @@
   "dependencies": {
     "aws-sdk": "2.x",
     "ejs": "2.x",    
-  },  
-  "scripts": {
-    "start": "node app.js"
-  },
-  "homepage": "https://github.com/Sciaa/HabarNodeDirectUploader#readme"  
+  }
 }
