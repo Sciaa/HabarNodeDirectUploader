@@ -1,8 +1,17 @@
 {
-  "name": "NodeDirectUploader",
-  "version": "0.0.1",
+  "name": "HabarNodeDirectUploader",
+  "description": "a really cool app",
+  "version": "1.0.0",
+  "engines": {
+    "node": "6.10.1"
+  },
   "dependencies": {
     "aws-sdk": "2.x",
-    "ejs": "2.x"    
-  }
+    "ejs": "2.x",
+    "express": "^4.15.3"
+  },  
+  "scripts": {
+    "start": "node app.js"
+  },
+  "homepage": "https://github.com/Sciaa/HabarNodeDirectUploader#readme"  
 }
