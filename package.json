@@ -8,6 +8,7 @@
   "dependencies": {
     "aws-sdk": "2.x",
     "ejs": "2.x",
+    "jimp": "^0.2.8",
     "express": "^4.15.3"
   },  
   "scripts": {
