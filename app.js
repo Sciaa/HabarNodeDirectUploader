@@ -11,6 +11,9 @@
  */
 const express = require('express');
 const aws = require('aws-sdk');
+const Jimp = require('jimp')
+
+//set up AWS S3 region, as per AWS SDK
 aws.config.update({region: 'ap-southeast-1'});
 aws.config.region = 'ap-southeast-1';
 
@@ -33,6 +36,23 @@ const S3_BUCKET = process.env.S3_BUCKET;
  * Upon request, render the 'account.html' web page in views/ directory.
  */
 app.get('/account', (req, res) => res.render('account.html'));
+
+
+
+/*function convertImgs(files){
+    new Jimp(files.buffer, (err, image)=>{
+      
+      //Resize this image
+      image.resize(512, 512)
+            //lower the quality by 90%      
+            .quality(10)
+            //Save image to file path
+            .write();
+    })
+}
+*/
+
+
 
 /*
  * Respond to GET requests to /sign-s3.
@@ -58,7 +78,7 @@ app.get('/sign-s3', (req, res) => {
     }
     const returnData = {
       signedRequest: data,
-      url: `https://${S3_BUCKET}.s3.amazonaws.com/${fileName}`
+      url: `https://${S3_BUCKET}.s3.amazonaws.com/chis/${fileName}`
     };
     res.write(JSON.stringify(returnData));
     res.end();
